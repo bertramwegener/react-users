@@ -14,6 +14,16 @@ function App() {
     fetchUsers();
   }, []);
 
+
+  function User({ name, mail, title, image, id }) {
+    // Nu kan du bruge name, mail osv. direkte
+    console.log("Enkeltvis props:", name, mail, title, image, id);
+  }
+  // I App.jsx:
+  <User name={user.name} mail={user.mail} title={user.title} image={user.image} id={user.id} />;
+
+
+
   return (
     <div className="page">
       <h1>Users</h1>
